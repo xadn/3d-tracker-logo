@@ -2,4 +2,4 @@
 
 # brew install pstoedit
 
-pstoedit -dt -f dxf:-polyaslines logo_main_2x.eps logo.dxf
+pstoedit -dt -xscale 100 -yscale 100 -f dxf:-polyaslines logo_main_2x.eps logo.dxf
