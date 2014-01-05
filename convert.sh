@@ -18,3 +18,4 @@
 # pstoedit -dt -f dxf:-polyaslines logo.eps $OUTPUT
 
 pstoedit -dt -f dxf:-polyaslines logo_main_2x.eps logo.dxf
+# pstoedit -dt -f dxf logo_main_2x.eps logo.dxf
