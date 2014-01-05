@@ -1,20 +1,17 @@
 $fn = 100; 
 
 module trackerLogo(thickness) {
-	difference() {
-	 cube([7.767, 1.2, thickness]);
-		translate ([-.01,-.01,.01]) {
-			linear_extrude(file="/Users/andy/Dropbox/Things/tracker-logo/logo.dxf", height = thickness * 2, center = true, convexity = 5);
+  difference() {
+   cube([7.767, 1.2, thickness]);
+    translate ([-.01,-.01,-.01]) {
+      linear_extrude(height = thickness * 2, convexity = 50) 
+      import(file = "/Users/andy/Dropbox/Things/tracker-logo/logo.dxf");
 		}
 	}
 }
 
-//cube([1, .1, .5]);i
-
-cube([1, .1, .5]);
-
-// translate([0, 0, .125]) 
-trackerLogo(.2);
+cube([8, 1.2, .1]);
+translate([.125, 0, 0]) trackerLogo(.3);
 
 
 
