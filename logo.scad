@@ -12,11 +12,13 @@ module trackerLogo(thickness) {
 }
 
 armThickness = 8;
-armWidth = 25;
+armWidth = 22.5;
 thickness = 40;
 upperCaseTop = 85.7;
 lowerCaseTop = 69.5;
 baseline = 31;
+middleUpper = upperCaseTop - ((upperCaseTop - baseline) / 2);
+middleLower = lowerCaseTop - ((lowerCaseTop - baseline) / 2);
 
 module support() {
   union() {
@@ -38,51 +40,39 @@ translate([0, 0, (armWidth - thickness)/2]) trackerLogo(thickness);
 translate([60, 112, armWidth]) rotate([180, 0, 0]) support();
 translate([60, 10, 0]) support();
 // P Support
-translate([110, upperCaseTop, 0]) arm();
-translate([110, baseline, 0]) arm();
+translate([115, middleLower, 0]) arm(25, 20);
 // I Support
-translate([170, lowerCaseTop, 0]) arm();
-translate([150, baseline, 0]) arm(40);
+translate([168, middleLower+5, 0]) arm(30, 10);
+translate([145, middleLower-5, 0]) arm(50, 10);
 // Dot Support
 translate([198.78, lowerCaseTop, 0]) 
 rotate([0, 0, 90]) arm();
 // V Support
-translate([190, lowerCaseTop, 0]) arm();
-translate([190, baseline, 0]) arm(40);
+translate([190, middleLower, 0]) arm(37, 20);
 // O Support
-translate([260, lowerCaseTop, 0]) arm();
-translate([240, baseline, 0]) arm(40);
+translate([245, middleLower, 0]) arm(25, 20);
 // T Support
-translate([300, lowerCaseTop, 0]) arm();
-translate([300, baseline, 0]) arm(40);
+translate([308, middleLower, 0]) arm(20, 20);
 // A Support
-translate([340, lowerCaseTop, 0]) arm();
-translate([340, baseline, 0]) arm();
+translate([330, middleLower, 0]) arm(20, 20);
 // L Support
-translate([400, lowerCaseTop, 0]) arm();
-translate([400, baseline, 0]) arm();
+translate([397, middleLower, 0]) arm(20, 20);
 // T Support
-translate([420, upperCaseTop, 0]) arm();
-translate([420, baseline, 0]) arm(40);
+translate([420, middleLower, 0]) arm(40, 20);
 // R Support
-translate([478, 72.5, -2.5]) arm(20, 3.5, 30);
-translate([472, baseline, 0]) arm();
+translate([465, middleLower, 0]) arm(40, 20);
 // A Support
-translate([519, lowerCaseTop, 0]) arm();
-translate([515, baseline, 0]) arm(25);
+translate([505, middleLower, 0]) arm(25, 20);
 // C Support
-translate([580, lowerCaseTop, 0]) arm();
-translate([580, baseline, 0]) arm();
+translate([575, middleLower, 0]) arm(20, 20);
 // K Support
 translate([630, 66.5, 0]) arm();
 translate([622, baseline, 0]) arm();
-translate([650, baseline, 0]) arm();
 // E Support
-translate([685, lowerCaseTop, 0]) arm();
-translate([685, baseline, 0]) arm();
+translate([650, middleLower, 0]) arm(50, 20);
 // R Support
-translate([725, lowerCaseTop, 0]) arm();
-translate([725, baseline, 0]) arm();
+translate([731, middleLower+10, 0]) arm(20, 20);
+translate([727, middleLower-19, 0]) arm(20, 8);
 
 
 
