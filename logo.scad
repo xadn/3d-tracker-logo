@@ -26,9 +26,9 @@ module support() {
   }
 }
 
-module arm(xSize = armThickness, zSize = armWidth) {
+module arm(length = 20, xSize = armThickness, zSize = armWidth) {
   translate([0, -xSize/2 + 2.5, 0]) 
-  cube([20, xSize, zSize]);
+  cube([length, xSize, zSize]);
 }
 
 // Logo
@@ -42,38 +42,47 @@ translate([110, upperCaseTop, 0]) arm();
 translate([110, baseline, 0]) arm();
 // I Support
 translate([170, lowerCaseTop, 0]) arm();
+translate([150, baseline, 0]) arm(40);
 // Dot Support
 translate([198.78, lowerCaseTop, 0]) 
 rotate([0, 0, 90]) arm();
 // V Support
 translate([190, lowerCaseTop, 0]) arm();
+translate([190, baseline, 0]) arm(40);
 // O Support
 translate([260, lowerCaseTop, 0]) arm();
+translate([240, baseline, 0]) arm(40);
 // T Support
 translate([300, lowerCaseTop, 0]) arm();
+translate([300, baseline, 0]) arm(40);
 // A Support
 translate([340, lowerCaseTop, 0]) arm();
+translate([340, baseline, 0]) arm();
 // L Support
+translate([400, lowerCaseTop, 0]) arm();
 translate([400, baseline, 0]) arm();
 // T Support
 translate([420, upperCaseTop, 0]) arm();
+translate([420, baseline, 0]) arm(40);
 // R Support
-translate([478, 72.5, -2.5]) arm(3.5, 30);
-// translate([472, baseline, 0]) arm();
+translate([478, 72.5, -2.5]) arm(20, 3.5, 30);
+translate([472, baseline, 0]) arm();
 // A Support
 translate([519, lowerCaseTop, 0]) arm();
+translate([515, baseline, 0]) arm(25);
 // C Support
 translate([580, lowerCaseTop, 0]) arm();
-// translate([580, baseline, 0]) arm();
+translate([580, baseline, 0]) arm();
 // K Support
 translate([630, 66.5, 0]) arm();
-// translate([622, baseline, 0]) arm();
+translate([622, baseline, 0]) arm();
+translate([650, baseline, 0]) arm();
 // E Support
 translate([685, lowerCaseTop, 0]) arm();
-// translate([685, baseline, 0]) arm();
+translate([685, baseline, 0]) arm();
 // R Support
 translate([725, lowerCaseTop, 0]) arm();
-// translate([725, baseline, 0]) arm();
+translate([725, baseline, 0]) arm();
 
 
 
