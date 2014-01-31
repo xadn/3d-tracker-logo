@@ -43,12 +43,12 @@ translate([60, 10, 0]) support();
 translate([115, middleLower, 0]) arm(25, 20);
 // I Support
 translate([168, middleLower+5, 0]) arm(30, 10);
-translate([145, middleLower-5, 0]) arm(50, 10);
+translate([145, middleLower-4, 0]) arm(50, 11.5);
 // Dot Support
 translate([198.78, lowerCaseTop, 0]) 
 rotate([0, 0, 90]) arm();
 // V Support
-translate([190, middleLower, 0]) arm(37, 20);
+translate([191, middleLower, 0]) arm(37, 20);
 // O Support
 translate([245, middleLower, 0]) arm(25, 20);
 // T Support
