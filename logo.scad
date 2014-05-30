@@ -1,4 +1,4 @@
-$fn = 100; 
+$fn = 100;
 
 module rawLogo() {
   linear_extrude(height = 20, convexity = 5) {
@@ -18,7 +18,7 @@ module trackerLogo() {
 module trackerSupports() {
   intersection() {
     translate([0, 32, 0]) cube([620, 20, 20]);
-    
+
     rawLogo();
   }
 }
